@@ -1,0 +1,38 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js')
+    script(src='/javascripts/school-frontEnd.js', defer)
+  body
+    h1 School Information
+    br
+    a(href='/')
+      input.button(type='button', value='HOME')
+    input.button(type='button', id='edit',value='EDIT')
+    form#info(action= 'school/updateSchool', method='post')
+      input#oName(type="text" name="oName")
+      image#image(src="/images/default.jpeg")
+      h2 Name
+      p#name
+      div.form-group
+        label(for='name') New Name:
+        input#name.name(type='text', name='name', placeholder='Name')
+      h2 About
+      p#about
+      div.form-group
+        label(for='about') New About:
+        textarea#about(type='text', rows='5', name='about')
+      h2 School
+      p#school
+      div.form-group
+        label(for='school') New School:
+        textarea#school(type='text', rows='5', name='school')
+      h2 Location
+      p#location
+      div.form-group
+        label(for='location') New Location:
+        input#location(type='text', name='location')
+      br
+      button.btn.btn-primary.form-group(type='submit') Submit

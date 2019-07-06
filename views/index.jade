@@ -1,0 +1,14 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js')
+    script(src='/javascripts/index-frontEnd.js', defer)
+  body
+    img(src="https://www.dreamschools.co/assets/redesign-logo-3ec7948f85dc727c7d5d95fef8eecedba36e0cdc64d315d342c8f855227cb772.png", width="300", heght="100")
+    h1= title
+    br
+    a(href='/form')
+      input.button(type='button', value='CREATE')
+    ul#schoolList

@@ -1,0 +1,29 @@
+doctype html
+html
+  head
+    title= title
+    link(href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700', rel='stylesheet')
+    link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.5.0/css/all.css', integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU', crossorigin='anonymous')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js')
+    script(src='https://sdk.amazonaws.com/js/aws-sdk-2.283.1.min.js')
+    script(src='/javascripts/form-frontEnd.js', defer)
+  body
+    h1 School Registration
+    .testbox
+      form(action='form/createSchool' method='post' enctype="multipart/form-data")
+        input#file-input(type='file', name='image')
+        image#preview(src="/images/default.jpeg")
+        h4
+          | Name
+          span *
+          input#name.name(type='text', name='name', placeholder='Name')
+        h4 About
+          textarea#about(type='text', rows='5', name='about')
+        h4 School
+          textarea#school(type='text', rows='5', name='school')
+        h4 Location
+            input#location(type='text', name='location')
+        .btn-block
+          button(type='submit') SUBMIT
+             
