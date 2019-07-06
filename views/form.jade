@@ -13,7 +13,7 @@ html
     .testbox
       form(action='form/createSchool' method='post' enctype="multipart/form-data")
         input#file-input(type='file', name='image')
-        image#preview(src="/images/default.jpeg")
+        image#preview(src="/images/default.jpeg", width="300", height="200")
         h4
           | Name
           span *
